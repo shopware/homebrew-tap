@@ -6,24 +6,30 @@ require_relative "lib/custom_download_strategies"
 class DashyCli < Formula
   desc ""
   homepage ""
-  version "0.0.3-dev"
+  version "0.0.4-dev"
   license "Closed Source"
 
   on_macos do
     on_intel do
-      url "https://github.com/shopware/dashy-cli/releases/download/v0.0.3-dev/dashy-cli_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "91c0b564f8113344a2e705643adcfb431b67d94132ffb9891eb0096fb7ccb606"
+      url "https://github.com/shopware/dashy-cli/releases/download/v0.0.4-dev/dashy-cli_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "386e9ce0d6cad40a70ee0f79cd564ce6770f1a5cbcee32de054cd3b2b0349627"
 
       def install
         bin.install "dashy"
+        bash_completion.install "completions/dashy.bash" => "_dashy"
+        zsh_completion.install "completions/dashy.zsh" => "_dashy"
+        fish_completion.install "completions/dashy.fish"
       end
     end
     on_arm do
-      url "https://github.com/shopware/dashy-cli/releases/download/v0.0.3-dev/dashy-cli_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "5b1a8d3ae98622992d8dfa5a884cde5b85271d0543455096fec350df5248ba82"
+      url "https://github.com/shopware/dashy-cli/releases/download/v0.0.4-dev/dashy-cli_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ea5fad20fa87309a865db292fb97ce944c4471dae1e6b965508c0070d47b4c22"
 
       def install
         bin.install "dashy"
+        bash_completion.install "completions/dashy.bash" => "_dashy"
+        zsh_completion.install "completions/dashy.zsh" => "_dashy"
+        fish_completion.install "completions/dashy.fish"
       end
     end
   end
@@ -31,21 +37,27 @@ class DashyCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/shopware/dashy-cli/releases/download/v0.0.3-dev/dashy-cli_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "891d7945d6ce266d20eff2d099bdd6c3b50c462ff07fe0262544e900f9f1f743"
+        url "https://github.com/shopware/dashy-cli/releases/download/v0.0.4-dev/dashy-cli_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "2ef5ad9e74f59e38949b532785746289e6bc371f5dcb7d5566dc04f789a70aa0"
 
         def install
           bin.install "dashy"
+          bash_completion.install "completions/dashy.bash" => "_dashy"
+          zsh_completion.install "completions/dashy.zsh" => "_dashy"
+          fish_completion.install "completions/dashy.fish"
         end
       end
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/shopware/dashy-cli/releases/download/v0.0.3-dev/dashy-cli_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "dd304a3c7aae8df41e7e4c5a862c7b8c2cd6168bd56755491ccd9e7838595f25"
+        url "https://github.com/shopware/dashy-cli/releases/download/v0.0.4-dev/dashy-cli_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "2a6a13dac042ad3d4fa447f4621ad662bd31d6aedc33cb0815d248003fd0c40d"
 
         def install
           bin.install "dashy"
+          bash_completion.install "completions/dashy.bash" => "_dashy"
+          zsh_completion.install "completions/dashy.zsh" => "_dashy"
+          fish_completion.install "completions/dashy.fish"
         end
       end
     end
