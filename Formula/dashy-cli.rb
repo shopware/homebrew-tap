@@ -6,13 +6,13 @@ require_relative "lib/custom_download_strategies"
 class DashyCli < Formula
   desc ""
   homepage ""
-  version "0.0.11-dev"
+  version "0.0.12-dev"
   license "Closed Source"
 
   on_macos do
     on_intel do
-      url "https://github.com/shopware/dashy-cli/releases/download/v0.0.11-dev/dashy-cli_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "0d3f4a2207d7ea6a19339f28151680da89aea3dacfdc84dc729dee255b13aae6"
+      url "https://github.com/shopware/dashy-cli/releases/download/v0.0.12-dev/dashy-cli_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "dc3e6552f50ecca7a3fa80acf4f05a9e07cc60de400c6495be98d7ef078ed023"
 
       def install
         bin.install "dashy"
@@ -22,8 +22,8 @@ class DashyCli < Formula
       end
     end
     on_arm do
-      url "https://github.com/shopware/dashy-cli/releases/download/v0.0.11-dev/dashy-cli_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "13910ae3634ea74ba6e96bc60f7928b9eece42625eeb9d6d7895b8220474625b"
+      url "https://github.com/shopware/dashy-cli/releases/download/v0.0.12-dev/dashy-cli_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "4860ef92172e4a02977334290732ece892f68ac1447ecd25db1e3945c92fd390"
 
       def install
         bin.install "dashy"
@@ -37,8 +37,8 @@ class DashyCli < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/shopware/dashy-cli/releases/download/v0.0.11-dev/dashy-cli_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "b05b450b96bf38b8e3fba59be12ef3925527e6eded5c7536ee77b72d0242e771"
+        url "https://github.com/shopware/dashy-cli/releases/download/v0.0.12-dev/dashy-cli_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "7b361ac2ff00824f574036209bffa97695fa83f1dfd1eb77014c0a3ed4e6b46a"
 
         def install
           bin.install "dashy"
@@ -50,8 +50,8 @@ class DashyCli < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/shopware/dashy-cli/releases/download/v0.0.11-dev/dashy-cli_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "96f300050f50f60ef385832fb3a0142dae5c3c7e59e1657b332be1da85cf1717"
+        url "https://github.com/shopware/dashy-cli/releases/download/v0.0.12-dev/dashy-cli_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "4133685535d8bb225e5feaa8b6c839dbef5463a4a40d15d4f33d2160b189210b"
 
         def install
           bin.install "dashy"
