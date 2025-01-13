@@ -1,4 +1,15 @@
 # homebrew-tap
-Homebrew tap for dashy-cli
 
-Use `brew install shopware/tap/dashy-cli` to install dashy-cli
+Shopware Homebrew Tap
+
+## Public Packages
+
+```
+brew install shopware/tap/shopware-cli
+```
+
+### Private packages
+
+```
+brew install shopware/tap/dashy-cli
+```
