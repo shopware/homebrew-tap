@@ -5,21 +5,21 @@
 class ShopwareLsp < Formula
   desc "Shopware Language Server"
   homepage "https://shopware.com"
-  version "0.0.12"
+  version "0.0.13"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.0.12/shopware-lsp_0.0.12_darwin_amd64.zip"
-      sha256 "72f914a1e6b5df87b4c5293656dec97671eb7d6aba51a3d2989d323319b7ed95"
+      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.0.13/shopware-lsp_0.0.13_darwin_amd64.zip"
+      sha256 "ad0995401af285d986d4658e0e88571471ebdd74253e0c6c6e44c86e13855cef"
 
       def install
         bin.install "shopware-lsp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.0.12/shopware-lsp_0.0.12_darwin_arm64.zip"
-      sha256 "3dd4b884eefb8012a03d42d845a8fc9f90b00a16ffbc72f5615d06bae6173f57"
+      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.0.13/shopware-lsp_0.0.13_darwin_arm64.zip"
+      sha256 "2e6f97f18c74432ebfd6274b17dd5a4c875947557bc079b45c9d521a713e2698"
 
       def install
         bin.install "shopware-lsp"
@@ -29,15 +29,15 @@ class ShopwareLsp < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.0.12/shopware-lsp_0.0.12_linux_amd64.zip"
-      sha256 "058f17d100bc1e344cf010c663b64a5ad5677d39d3d19c9b965acc8a36c882b7"
+      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.0.13/shopware-lsp_0.0.13_linux_amd64.zip"
+      sha256 "d47e8a8bf76db772742c5487f67b2a15b5dd033a79a6bd005e34e31e0116e0c2"
       def install
         bin.install "shopware-lsp"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.0.12/shopware-lsp_0.0.12_linux_arm64.zip"
-      sha256 "7bf3e5da0ab7bc852ca6dee1eb20188ec57b43b527c27d3b86a93fbdec1cfe27"
+      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.0.13/shopware-lsp_0.0.13_linux_arm64.zip"
+      sha256 "fdeda16dee1f750e1c10e3d0dbd5b809a80764b527e1d43381627002d0d97c5c"
       def install
         bin.install "shopware-lsp"
       end
