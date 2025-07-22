@@ -12,7 +12,7 @@ class SwPaas < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/shopware/paas-cli/releases/download/0.0.31/sw-paas_Darwin_x86_64", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "c76368c2697d221d8106c38049817346f62298a7669fb6a865e84d643818c3b1"
+      sha256 "d3d2f6e322bc575e8bd8464dc17de81327ac898fddf64fe0ad8ca650812718a5"
 
       def install
         bin.install "sw-paas"
@@ -20,7 +20,7 @@ class SwPaas < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/shopware/paas-cli/releases/download/0.0.31/sw-paas_Darwin_arm64", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "f1c105b8e14c7a30f483c5352f3bd143782823fa75bc5f88aff9d98c12dcb1c4"
+      sha256 "cccd195d6d771450247c06366c960275761e53efc9be7f66cca5b2d3d75df36c"
 
       def install
         bin.install "sw-paas"
@@ -31,14 +31,14 @@ class SwPaas < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/shopware/paas-cli/releases/download/0.0.31/sw-paas_Linux_x86_64", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "795f250b5ed7dfaa8961652792f9592d1e5d0dfbf29b5f67eda83cb41d9dd1ff"
+      sha256 "ff3e983ddf9f5286d26f37e8ba16fec1ca9676e9fa446a0fcd33794e7c0fc0c0"
       def install
         bin.install "sw-paas"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/shopware/paas-cli/releases/download/0.0.31/sw-paas_Linux_arm64", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "fceab5b866685d8306127b5918f8147652b93459557c1c8bad1bfe7bd842c3d0"
+      sha256 "a4259e5e8ce8f104a4486773ac5aae154347b86d44c00f8e5a59b929bcfd7234"
       def install
         bin.install "sw-paas"
       end
