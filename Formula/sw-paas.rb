@@ -6,21 +6,21 @@ require_relative "lib/custom_download_strategies"
 class SwPaas < Formula
   desc ""
   homepage ""
-  version "0.0.32"
+  version "0.0.33"
   license "Closed Source"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shopware/paas-cli/releases/download/0.0.32/sw-paas_Darwin_x86_64", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "889085475f747866f7c20ca1c742c82c1bb0819e57d31542b6c1f1219cd2ea1d"
+      url "https://github.com/shopware/paas-cli/releases/download/0.0.33/sw-paas_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "3637cee8315f176391c606c159e73617a40fa001cb1695d7656f16eacbde2237"
 
       def install
         bin.install "sw-paas"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shopware/paas-cli/releases/download/0.0.32/sw-paas_Darwin_arm64", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "4f658a6628846631d6ba787a66015c5db5bff1abb6c39bbefdaa6a5b913b7b2f"
+      url "https://github.com/shopware/paas-cli/releases/download/0.0.33/sw-paas_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "67ecf50caa8d42f49dae34dba230d25481d44783cd477124dc0d429e7506a046"
 
       def install
         bin.install "sw-paas"
@@ -30,15 +30,15 @@ class SwPaas < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/shopware/paas-cli/releases/download/0.0.32/sw-paas_Linux_x86_64", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "58075964827886a2567ed152726b5e129b1171ccce9f63697af2e9dc2156ee3c"
+      url "https://github.com/shopware/paas-cli/releases/download/0.0.33/sw-paas_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "c0259bf5bab20af5599669d467b2ff1f6f8ae1dec57e7034370eb8f97e24675c"
       def install
         bin.install "sw-paas"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/shopware/paas-cli/releases/download/0.0.32/sw-paas_Linux_arm64", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "0df4693f19e907e9c96c57b45379cb4c2a381fbcae1103d9bf9c12041d0fcdf2"
+      url "https://github.com/shopware/paas-cli/releases/download/0.0.33/sw-paas_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "833cefe5e17528c11d5810b70d9b5474cec89af33cbd0cc198cd205ee4cc640c"
       def install
         bin.install "sw-paas"
       end
