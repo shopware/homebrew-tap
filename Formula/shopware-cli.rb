@@ -8,6 +8,8 @@ class ShopwareCli < Formula
   version "0.6.31"
   license "MIT"
 
+  disable! date: "2025-09-22", because: "the cask should be used now instead", replacement_cask: "shopware-cli"
+
   depends_on "git" => :optional
   depends_on "node" => :optional
   depends_on "node-sass"
