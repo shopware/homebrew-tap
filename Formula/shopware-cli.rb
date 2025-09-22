@@ -5,7 +5,7 @@
 class ShopwareCli < Formula
   desc "Shopware CLI helps Shopware developers manage extensions"
   homepage "https://shopware.com"
-  version "0.6.31"
+  version "0.6.32"
   license "MIT"
 
   disable! date: "2025-09-22", because: "the cask should be used now instead", replacement_cask: "shopware-cli"
