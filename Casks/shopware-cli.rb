@@ -3,7 +3,7 @@ cask "shopware-cli" do
   name "shopware-cli"
   desc "Shopware CLI helps Shopware developers manage extensions"
   homepage "https://shopware.com"
-  version "0.8.2"
+  version "0.8.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -17,22 +17,22 @@ cask "shopware-cli" do
   on_macos do
     on_intel do
       url "https://github.com/shopware/shopware-cli/releases/download/#{version}/shopware-cli_Darwin_x86_64.tar.gz"
-      sha256 "bf25233619c4d2f15eaae702c01a7b2b5416e89e34f90260b4e4114bfda221d9"
+      sha256 "81bdcf6e41df2529c71ec95600bd52f60e81af92aeae15c45f75792e56558f39"
     end
     on_arm do
       url "https://github.com/shopware/shopware-cli/releases/download/#{version}/shopware-cli_Darwin_arm64.tar.gz"
-      sha256 "9651a5860208ae09f022674ce37f8031b24401578fb2af2bf353aad1569d7c45"
+      sha256 "47f78b7a18aef633ccbf93f8f3d09b0da8ebaa6e01373c2d3d034cf8267b36dd"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/shopware/shopware-cli/releases/download/#{version}/shopware-cli_Linux_x86_64.tar.gz"
-      sha256 "678b2b589ebf2a4804f0e233f06ba29deb8f379a70c02fb42563c11df7d2fee0"
+      sha256 "8e590e339a9521a7ad50fb4085d4062bde3d27137ae4fc277f7c750519c5822e"
     end
     on_arm do
       url "https://github.com/shopware/shopware-cli/releases/download/#{version}/shopware-cli_Linux_arm64.tar.gz"
-      sha256 "00c237b0417e85f26e81c22de18e5170e03d465451c0671bdf1dad2e3d8ab5f9"
+      sha256 "c61e5f3ef25de0ec0f55d46a5c864b2ecb8fe8a3459604295cb8115afa3cbaa9"
     end
   end
 
