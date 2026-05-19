@@ -6,21 +6,21 @@ require_relative "lib/custom_download_strategies"
 class SwPaas < Formula
   desc ""
   homepage ""
-  version "0.0.51"
+  version "0.0.52"
   license "Closed Source"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shopware/paas-cli/releases/download/0.0.51/sw-paas_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "9744a40548768c9a62bdd881fb6c4ac8953f3759d94755d20dbb915558a4c03f"
+      url "https://github.com/shopware/paas-cli/releases/download/0.0.52/sw-paas_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "b5f82bd2347b37c07d4cb0da4714c80f5fca8ed5f15d267ea74c67e7bffed23d"
 
       define_method(:install) do
         bin.install "sw-paas"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shopware/paas-cli/releases/download/0.0.51/sw-paas_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "7698dbbacfa7222310712be1db9f857abacd10cdf1ef9b2233a2e15e53363820"
+      url "https://github.com/shopware/paas-cli/releases/download/0.0.52/sw-paas_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f4d4868f23818bd9962b0c4734e0c62414c97b52feb939f62be5e8c6723537e1"
 
       define_method(:install) do
         bin.install "sw-paas"
@@ -30,15 +30,15 @@ class SwPaas < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shopware/paas-cli/releases/download/0.0.51/sw-paas_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e665c29f363ae2114279a38fdaf04a2fb15f594d5863dd2c58d80c23918939da"
+      url "https://github.com/shopware/paas-cli/releases/download/0.0.52/sw-paas_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "c1cd50e1a16fad93ac51cf3c70a23789716151e32fceab20f87f7b49ad1dfa9f"
       define_method(:install) do
         bin.install "sw-paas"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shopware/paas-cli/releases/download/0.0.51/sw-paas_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "d06bee38f921de9bb249ee1df3984ff93357f7038a41f09e58060913439f603e"
+      url "https://github.com/shopware/paas-cli/releases/download/0.0.52/sw-paas_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "4d128d22405e488663306aa407b0d2bc2b1bcf80707d71c61a36670e816780f5"
       define_method(:install) do
         bin.install "sw-paas"
       end
