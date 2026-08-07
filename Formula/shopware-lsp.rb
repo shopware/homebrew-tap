@@ -5,23 +5,23 @@
 class ShopwareLsp < Formula
   desc "Shopware Language Server"
   homepage "https://shopware.com"
-  version "0.1.0"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.1.0/shopware-lsp_0.1.0_darwin_amd64.zip"
-      sha256 "c6246e5c380adc0434edb7e655dc0fec516bfab4c8dc1249f7c6016ac66bbaf9"
+      url "https://github.com/shopware/shopware-lsp/releases/download/0.1.2/shopware-lsp_0.1.2_darwin_amd64.zip"
+      sha256 "c1d167ae1d50c51f5c2ae5818cdb821f80814f5f054fbc33d26f78920590f9c3"
 
-      def install
+      define_method(:install) do
         bin.install "shopware-lsp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.1.0/shopware-lsp_0.1.0_darwin_arm64.zip"
-      sha256 "2286cea4b9fbcd0b658ac891a79ab70647f9124f8a92a0ec1ad906a2fe3ff772"
+      url "https://github.com/shopware/shopware-lsp/releases/download/0.1.2/shopware-lsp_0.1.2_darwin_arm64.zip"
+      sha256 "a34595581820de22ce412e17c0b88324729a7f06606138fb1bfbf42a8ba5f5b3"
 
-      def install
+      define_method(:install) do
         bin.install "shopware-lsp"
       end
     end
@@ -29,16 +29,16 @@ class ShopwareLsp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.1.0/shopware-lsp_0.1.0_linux_amd64.zip"
-      sha256 "6d676aa6b9757e964c95ec661f576e7270865a2fefcc8051b35180e9d594a069"
-      def install
+      url "https://github.com/shopware/shopware-lsp/releases/download/0.1.2/shopware-lsp_0.1.2_linux_amd64.zip"
+      sha256 "8f0ec5f279f2b7d87d451c557a0f445eea89e2f5100e6d8007f67302ed38fb8d"
+      define_method(:install) do
         bin.install "shopware-lsp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/shopwareLabs/shopware-lsp/releases/download/0.1.0/shopware-lsp_0.1.0_linux_arm64.zip"
-      sha256 "821fa7eeeb5225bada8e16fb90b7c3257b668a745c2a2a10436fc068d048fdf7"
-      def install
+      url "https://github.com/shopware/shopware-lsp/releases/download/0.1.2/shopware-lsp_0.1.2_linux_arm64.zip"
+      sha256 "55d9760ad57d97a41b9144e36ea0ccdb86c5ae60764e28c35e0195e79b5de0d4"
+      define_method(:install) do
         bin.install "shopware-lsp"
       end
     end
