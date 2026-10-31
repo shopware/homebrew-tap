@@ -1,6 +1,7 @@
-# Save this file as `lib/private_strategy.rb`
-# Add `require_relative "lib/private_strategy"` to your formula.
-# 
+# Formulae load this with `require_relative "lib/custom_download_strategies"`.
+# It lives outside Formula/ because `brew tap` loads every Formula/**/*.rb as a
+# formula; Formula/lib is a symlink to this directory, which that glob skips.
+#
 # This is based on the following, with minor fixes.
 # https://github.com/Homebrew/brew/blob/193af1442f6b9a19fa71325160d0ee2889a1b6c9/Library/Homebrew/compat/download_strategy.rb#L48-L157
 
